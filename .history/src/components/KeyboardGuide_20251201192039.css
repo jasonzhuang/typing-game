@@ -1,0 +1,126 @@
+.keyboard-guide {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.keyboard-row:nth-child(2) {
+  margin-left: 15px;
+}
+
+.keyboard-row:nth-child(3) {
+  margin-left: 35px;
+}
+
+.key {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2c3e50;
+  border: 2px solid;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.key.active {
+  color: white;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.key.spacebar {
+  width: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 0.75rem;
+}
+
+/* 手指提示 */
+.finger-hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.finger-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.finger-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.finger-text strong {
+  color: #2c3e50;
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  .keyboard {
+    padding: 12px;
+    gap: 5px;
+  }
+
+  .keyboard-row {
+    gap: 4px;
+  }
+
+  .keyboard-row:nth-child(2) {
+    margin-left: 10px;
+  }
+
+  .keyboard-row:nth-child(3) {
+    margin-left: 25px;
+  }
+
+  .key {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+    border-radius: 5px;
+  }
+
+  .key.spacebar {
+    width: 140px;
+    font-size: 0.6rem;
+  }
+
+  .finger-hint {
+    padding: 8px 15px;
+  }
+
+  .finger-text {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,74 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 背景装饰 */
+.background-decorations {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.decoration {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
+.decoration.star {
+  top: 10%;
+  left: 5%;
+  font-size: 2.5rem;
+}
+
+.decoration.cloud {
+  top: 15%;
+  right: 10%;
+  font-size: 3rem;
+}
+
+.decoration.heart {
+  bottom: 20%;
+  left: 8%;
+  font-size: 2rem;
+}
+
+.decoration.rocket {
+  top: 40%;
+  right: 5%;
+  font-size: 2.5rem;
+}
+
+.decoration.rainbow {
+  bottom: 15%;
+  right: 15%;
+  font-size: 2.5rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+  }
+
+  .decoration {
+    font-size: 1.5rem;
+  }
+
+  .decoration.cloud {
+    font-size: 2rem;
+  }
+}
+
